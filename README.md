@@ -1,3 +1,3 @@
 # covid
-view covid-19 result
-check septriputraw.github.io/covid/
+view covid-19 result<br>
+check <a href="septriputraw.github.io/covid/"> here </a>
