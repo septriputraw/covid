@@ -6,21 +6,21 @@ else
 
 //caching
 workbox.precaching.precacheAndRoute([
-  {url: '/index.html', revision: '1'},
-  {url: '/nav.html', revision: '1'},
-  {url: '/manifest.json', revision: '1'},
-  {url: '/pages/about.html', revision: '1'},
-  {url: '/pages/contact.html', revision: '1'},
-  {url: '/pages/saved.html', revision: '1'},
-  {url: '/pages/home.html', revision: '1'},
-  {url: '/pages/scorer.html', revision: '1'},
-  {url: '/css/materialize.min.css', revision: '1'},
-  {url: '/css/style.css', revision: '1'},
-  {url: '/js/materialize.min.js', revision: '1'},
-  {url: '/js/nav.js', revision: '1'},
-  {url: '/js/db.js', revision: '1'},
-  {url: '/js/apicovid.js', revision: '1'},
-  {url: '/js/idb.js', revision: '1'},
+  {url: '/covid/index.html', revision: '1'},
+  {url: '/covid/nav.html', revision: '1'},
+  {url: '/covid/manifest.json', revision: '1'},
+  {url: '/covid/pages/about.html', revision: '1'},
+  {url: '/covid/pages/contact.html', revision: '1'},
+  {url: '/covid/pages/saved.html', revision: '1'},
+  {url: '/covid/pages/home.html', revision: '1'},
+  {url: '/covid/pages/scorer.html', revision: '1'},
+  {url: '/covid/css/materialize.min.css', revision: '1'},
+  {url: '/covid/css/style.css', revision: '1'},
+  {url: '/covid/js/materialize.min.js', revision: '1'},
+  {url: '/covid/js/nav.js', revision: '1'},
+  {url: '/covid/js/db.js', revision: '1'},
+  {url: '/covid/js/apicovid.js', revision: '1'},
+  {url: '/covid/js/idb.js', revision: '1'},
 ]);
 
 workbox.routing.registerRoute(
@@ -123,7 +123,7 @@ self.addEventListener('push', (event) => {
     }
     var options = {
       body: body,
-      icon: '/assets/images/icons/icon-72x72.png',
+      icon: '/covid/assets/images/icons/icon-72x72.png',
       vibrate: [100, 50, 100],
       data: {
         dateOfArrival: Date.now(),
