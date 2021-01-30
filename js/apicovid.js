@@ -1,4 +1,6 @@
 const baseUrl = "https://indonesia-covid-19.mathdro.id/api";
+const baseUrl2 = "https://data.covid19.go.id/public/api/update.json";
+const corsUrl = "https://cors-anywhere.herokuapp.com/";
 //const token = "6acd4debffc449c7a96ed6b6a1f72120";
 $(document).ready(() => {
   $(".preloader-wrapper").fadeOut(3000);
@@ -39,13 +41,13 @@ function getData() {
                       <div class="card-content light-blue">
                         <span class="card-title truncate">INDONESIA</span>
                         <div class="card-panel yellow accent-2">
-                          <span class="black-text center">Confirmed : <p>${data.jumlahKasus}</p></span>
+                          <span class="black-text center">Confirmed : <p>${data.update.total.jumlah_positif}</p></span>
                         </div>
                         <div class="card-panel green accent-3">
-                          <span class="black-text center">Recovered : <p>${data.sembuh}</p></span>
+                          <span class="black-text center">Recovered : <p>${data.update.total.jumlah_sembuh}</p></span>
                         </div>
                         <div class="card-panel red accent-4">
-                          <span class="black-text center">Deaths : <p color=red>${data.meninggal}</p></span>
+                          <span class="black-text center">Deaths : <p color=red>${data.update.total.jumlah_meninggal}</p></span>
                         </div>
                       </div>
                     </div>
@@ -60,7 +62,7 @@ function getData() {
       }
     )
   }
-  fetch(`${baseUrl}`,{
+  fetch(`${corsUrl}`+${baseUrl2}`,{
     method: "GET",
     /*headers: {
       "X-Auth-Token": `${token}`
@@ -78,15 +80,15 @@ function getData() {
               <div class="col s12">
                 <div class="card">
                   <div class="card-content light-blue">
-                    <span class="card-title truncate">INDONESIA</span>
+                    <span class="card-title truncate">Total Kumulatif</span>
                     <div class="card-panel yellow accent-2">
-                      <span class="black-text center">Confirmed : <p>${data.jumlahKasus}</p></span>
+                      <span class="black-text center">Confirmed : <p>${data.update.total.jumlah_positif}</p></span>
                     </div>
                     <div class="card-panel green accent-3">
-                      <span class="black-text center">Recovered : <p>${data.sembuh}</p></span>
+                      <span class="black-text center">Recovered : <p>${data.update.total.jumlah_sembuh}</p></span>
                     </div>
                     <div class="card-panel red accent-4">
-                      <span class="black-text center">Deaths : <p color=red>${data.meninggal}</p></span>
+                      <span class="black-text center">Deaths : <p color=red>${data.update.total.jumlah_meninggal}</p></span>
                     </div>
                   </div>
                 </div>
