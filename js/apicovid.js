@@ -62,7 +62,7 @@ function getData() {
       }
     )
   }
-  fetch(`${corsUrl}`+${baseUrl2}`,{
+  fetch(`${corsUrl}`+`${baseUrl2}`,{
     method: "GET",
     /*headers: {
       "X-Auth-Token": `${token}`
